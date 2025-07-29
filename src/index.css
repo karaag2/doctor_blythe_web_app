@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 25rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+}
+
+.roboto-basic {
+  font-family: "Roboti", "sanq serif";
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: itali;
+}
+
+.text {
+  font-family: 'Arial', sans-serif;
+  /* font-size: 28px; */
+  /* fill: currentColor; */
+  font-weight: bold;
+}
+
+.icon {
+  stroke: currentColor;
+  fill: none;
+}
+
+/* .text { fill: currentColor; } */
+.icon {
+  stroke: currentColor;
+}
+body{
+  overflow-x: hidden;
+}
+
+.amdow{
+  filter: drop-shadow(1px 1px 5px #bedbff);
+}.ammdow{
+  filter: drop-shadow(1px 1px 10px #2b7bff);
+}
+/* styles.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
