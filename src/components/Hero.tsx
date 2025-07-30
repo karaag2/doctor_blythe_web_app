@@ -5,9 +5,9 @@ import stetoscope from "../assets/images/stethoscope.png";
 import TopBar from "./TopBar";
 const Hero = () => {
 	return (
-		<div className="relative flex flex-col max-w-screen overflow-hidden">
+		<div className="flex flex-col max-w-screen overflow-hidden">
 			<TopBar />
-			<div className="-top-22 -right-20 relative bg-gradient-to-b from-blue-500 to-blue-200 pt-7 rounded-b-full w-fit overflow-hi rotate-45">
+			<div className="-top-22 -right-20 sm:right-0 sm:left-4/9 md:left-1/2 lg:left-3/5 xl:left-3/4 relative bg-gradient-to-b from-blue-500 to-blue-200 pt-7 rounded-b-full w-fit overflow-hi rotate-45 xl:scale-120">
 				<div className="rounded-b-full w-fit overflow-hidden">
 					<div className="top-14 -right-8 relative h-fit -rotate-45">
 						<img

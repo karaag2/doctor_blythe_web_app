@@ -6,7 +6,7 @@ import icon from "../assets/images/pharmacy.png";
 
 const Services = () => {
 	return (
-		<div className="mb-8 py-12 font-[Montserrat]">
+		<div className="mb-8 py-12 overflow-hidden font-[Montserrat]">
 			<div className="space-y-1 text-center">
 				<h1 className="font-bold text-blue-300 text-xs uppercase">service</h1>
 				<h2 className="font-bold text-2xl sm:text-4xl capitalize">

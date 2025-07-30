@@ -29,20 +29,44 @@
 .icon {
   stroke: currentColor;
 }
-body{
+
+body {
   overflow-x: hidden;
 }
 
-.amdow{
+.amdow {
   filter: drop-shadow(1px 1px 5px #bedbff);
-}.ammdow{
+}
+
+.ammdow {
   filter: drop-shadow(1px 1px 10px #2b7bff);
 }
+
 /* styles.css */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  /* IE & Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.liquid-glass {
+  background: transparent;
+  backdrop-filter: blur(3px);
+}
+
+.liquid-glass-break {
+  filter: drop-shadow(1px 1px 15px #2b7bff);
+}
+
+* {
+  font-family: Montserrat;
+}
+
+@theme {
+  --breakpoint-sm: 30rem;
 }

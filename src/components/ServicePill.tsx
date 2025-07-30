@@ -11,7 +11,7 @@ const ServicePill = (props: {
 	return (
 		<div
 			className={clsx(
-				"absolute flex items-center bg-white py-1 rounded-full xs:w-96",
+				"absolute flex items-center bg-white py-1 rounded-full",
 				props.positionning,
 				props.size,
 				props.leftIcon ? "flex-row-reverse pr-4 pl-1" : "pr-1 pl-4",

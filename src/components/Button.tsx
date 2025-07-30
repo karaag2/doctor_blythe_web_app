@@ -1,7 +1,6 @@
-import React from "react";
 import clsx from "clsx";
 
-const Button = (props: { title?: string; addStyle: string }) => {
+const Button = (props: { title: string; addStyle?: string }) => {
 	return (
 		<button
 			type="button"
