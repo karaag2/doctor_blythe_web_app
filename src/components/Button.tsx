@@ -5,7 +5,7 @@ const Button = (props: { title: string; addStyle?: string }) => {
 		<button
 			type="button"
 			className={clsx(
-				"bg-blue-500 hover:bg-blue-300 me-2 mb-2 px-5 py-2 rounded-full focus:outline-none focus:ring-4 focus:ring-blue-300 font-[Montserrat] font-medium text-white text-sm !text-base text-center amdow",
+				"bg-blue-500 hover:bg-blue-300 me-2 px-5 py-2 rounded-full focus:outline-none focus:ring-4 focus:ring-blue-300 font-[Montserrat] font-medium text-white text-sm !text-base text-center amdow",
 				props.addStyle,
 			)}
 		>

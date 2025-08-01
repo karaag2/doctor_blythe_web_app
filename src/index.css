@@ -54,14 +54,14 @@ body {
   /* Firefox */
 }
 
-.liquid-glass {
+/* .liquid-glass {
   background: transparent;
   backdrop-filter: blur(3px);
 }
 
 .liquid-glass-break {
   filter: drop-shadow(1px 1px 15px #2b7bff);
-}
+} */
 
 * {
   font-family: Montserrat;
@@ -69,4 +69,16 @@ body {
 
 @theme {
   --breakpoint-sm: 35rem;
+}
+@layer components {
+  .liquid-glass {
+    @apply bg-transparent backdrop-blur-xs;
+  }
+  .liquid-glass-break {
+    @apply drop-shadow-lg filter;
+  }
+  .no-liquid-glass {
+    @apply bg-transparent backdrop-blur-none;
+  }
+
 }

@@ -9,6 +9,7 @@ const DetailCard = (props: {
 	buttontitle?: string;
 	isbutton?: boolean;
 	styles?: string;
+	special?: boolean;
 }) => {
 	const onbutton = props.isbutton ? props.isbutton : false;
 	return (
@@ -22,7 +23,12 @@ const DetailCard = (props: {
 				<h1 className="font-bold text-blue-300 text-xs uppercase">
 					{props.heading}
 				</h1>
-				<h2 className="font-bold text-black text-2xl sm:text-4xl capitalize">
+				<h2
+					className={clsx(
+						"font-bold text-black text-2xl sm:text-4xl capitalize",
+						props.special ? "!text-4xl" : "",
+					)}
+				>
 					{props.title}
 				</h2>
 			</div>
@@ -30,7 +36,10 @@ const DetailCard = (props: {
 				<p className="">{props.detail}</p>
 			</div>
 			{onbutton && (
-				<Button title={props.buttontitle} addStyle="w-full sm:w-auto" />
+				<Button
+					title={props.buttontitle ? props.buttontitle : ""}
+					addStyle="w-full sm:w-auto"
+				/>
 			)}
 		</div>
 	);

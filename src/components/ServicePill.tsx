@@ -11,22 +11,20 @@ const ServicePill = (props: {
 	return (
 		<div
 			className={clsx(
-				"absolute flex items-center bg-white py-1 rounded-full",
+				"absolute flex items-center bg-white shadow-md px-3 py-1 rounded-full transition-transform duration-300",
 				props.positionning,
 				props.size,
-				props.leftIcon ? "flex-row-reverse pr-4 pl-1" : "pr-1 pl-4",
+				props.leftIcon ? "flex-row-reverse" : "",
 			)}
 		>
-			{props.title}
-			{props.leftIcon ? (
-				<div className="bg-blue-300 mx-2 rounded-full">
-					<img src={props.leftIcon} alt="" className="rounded-full h-10" />
-				</div>
-			) : (
-				<div className="bg-blue-300 mx-2 rounded-full">
-					<img src={props.rightIcon} alt="" className="rounded-full h-10" />
-				</div>
-			)}
+			<span className="font-semibold text-sm">{props.title}</span>
+			<div className="bg-blue-300 mx-2 rounded-full">
+				<img
+					src={props.leftIcon || props.rightIcon || ""}
+					alt=""
+					className="rounded-full w-8 h-8 object-cover"
+				/>
+			</div>
 		</div>
 	);
 };

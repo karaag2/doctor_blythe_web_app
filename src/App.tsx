@@ -1,25 +1,19 @@
-import React from "react";
-import logo from "./assets/images/logo.svg";
-import Hero from "./components/Hero";
-import Pitch from "./components/Pitch";
-import Infos from "./components/Infos";
-import Services from "./components/Services";
-import Features from "./components/Features";
-import Schedule from "./components/Schedule";
-import DoctorList from "./components/DoctorList";
-import Contac from "./components/Contac";
+// App.tsx
+import { Route, Switch } from "wouter";
+import LandingPage from "./pages/LandingPage";
 
-export const App = () => {
+function Home() {
+	return <div>Page d'accueil</div>;
+}
+
+function About() {
+	return <div>À propos</div>;
+}
+
+export function App() {
 	return (
-		<>
-			<Hero />
-			<Pitch />
-			<Infos />
-			<Services />
-			<Features />
-			<Schedule />
-			<DoctorList />
-			<Contac />
-		</>
+		<Switch>
+			<Route path="/" component={() => <LandingPage />} />
+		</Switch>
 	);
-};
+}

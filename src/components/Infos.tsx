@@ -7,7 +7,7 @@ import location from "../assets/images/map (2).png";
 import SpecialCard from "./SpecialCard";
 const Infos = () => {
 	return (
-		<div className="flex space-x-12 bg-blue-100 my-8 px-12 py-6 w-full overflow-scroll scrollbar-hide">
+		<div className="flex space-x-12 bg-blue-100 px-12 py-6 w-full overflow-scroll scrollbar-hide">
 			<SpecialCard title="Opening Hours" icon={timer}>
 				<div>
 					<p className="opacity-85 text-xs">monday - friday</p>

@@ -1,7 +1,2 @@
 overrides:
-  '@tailwindcss/vite': link:../../AppData/Local/pnpm/global/5/node_modules/@tailwindcss/vite
   clsx: link:../../AppData/Local/pnpm/global/5/node_modules/clsx
-  rome: link:../../AppData/Local/pnpm/global/5/node_modules/rome
-  tailwindcss: link:../../AppData/Local/pnpm/global/5/node_modules/tailwindcss
-  typescript: link:../../AppData/Local/pnpm/global/5/node_modules/typescript
-  vite: link:../../AppData/Local/pnpm/global/5/node_modules/vite
