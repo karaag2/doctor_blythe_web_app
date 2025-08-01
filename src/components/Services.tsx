@@ -15,7 +15,7 @@ const Services = () => {
 					our medical services
 				</h2>
 			</div>
-			<div className="relative flex sm:flex flex-col justify-between sm:justify-between">
+			<div className="relative flex sm:flex max-sm:flex-col justify-between sm:justify-between">
 				<div className="mx-auto my-12 mb-12 w-full sm:w-2/5 max-w-3xl h-96 sm:-translate-x-10">
 					<img src={fort} alt="Specialist" className="w-full h-auto ammdow" />
 
