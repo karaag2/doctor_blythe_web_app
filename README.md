@@ -1,69 +1,58 @@
-# React + TypeScript + Vite
+# Doctor Blythe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Doctor Blythe est une application web développée en TypeScript et React, conçue pour faciliter la prise de rendez-vous médicaux, la recherche de spécialistes et l'accès à des informations médicales essentielles.
 
-Currently, two official plugins are available:
+## Fonctionnalités principales
+- Recherche de médecins et spécialistes
+- Consultation des horaires et disponibilités
+- Prise de rendez-vous en ligne
+- Présentation des services médicaux
+- Informations sur les établissements de santé
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Structure du projet
+```
+eslint.config.js
+index.html
+package.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+README.md
+rome.json
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+public/
+src/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Démarrage rapide
+1. Installer les dépendances :
+   ```sh
+   pnpm install
+   ```
+2. Lancer le serveur de développement :
+   ```sh
+   pnpm run dev
+   ```
+3. Accéder à l'application via [http://localhost:5173](http://localhost:5173)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Technologies utilisées
+- TypeScript
+- React
+- Vite
+- PNPM
+- ESLint
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Organisation du code
+- `src/` : Contient le code source principal (composants, pages, assets)
+- `public/` : Fichiers statiques accessibles publiquement
+- `components/` : Composants réutilisables de l'interface
+- `pages/` : Pages principales de l'application
+- `assets/` : Images et ressources graphiques
+
+## Auteur
+Ce projet a été réalisé et publié par Amos Issa.
+
+## Licence
+Ce projet est sous licence MIT.
