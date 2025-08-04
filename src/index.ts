@@ -1,1 +1,0 @@
-const hazar = 342;

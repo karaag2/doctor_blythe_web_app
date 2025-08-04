@@ -1,4 +1,4 @@
-import React from "react";
+//
 import DetailCard from "./DetailCard";
 import fort from "../assets/images/specialist.png";
 import ServicePill from "./ServicePill";

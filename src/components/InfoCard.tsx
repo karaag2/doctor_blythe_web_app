@@ -1,4 +1,4 @@
-import React from "react";
+//
 import { type ReactNode } from "react";
 import Button from "./Button";
 
@@ -17,9 +17,7 @@ const InfoCard = (props: {
 				<p className="">{props.children}</p>
 				<Button title="Bloquer" addStyle="!text-base font-[Montserrat] amdow" />
 			</div>
-			<div>
-				{""}
-			</div>
+			<div>{""}</div>
 		</>
 	);
 };

@@ -1,4 +1,4 @@
-import React from "react";
+//
 import DetailCard from "./DetailCard";
 import icon from "../assets/images/hospital.png";
 import stetho from "../assets/images/stethoscope (3).png";

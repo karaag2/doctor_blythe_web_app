@@ -1,4 +1,4 @@
-import React from "react";
+//
 import DetailCard from "./DetailCard";
 import calendar from "../assets/images/calendar.png";
 

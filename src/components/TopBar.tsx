@@ -1,8 +1,6 @@
-import React from "react";
+//
 
 import LogoBlue from "../assets/images/logo-blue.svg";
-import LogoWhite from "../assets/images/logo-white.svg";
-
 const TopBar = () => {
 	return (
 		<div className="relative">

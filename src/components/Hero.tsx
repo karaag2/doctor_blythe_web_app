@@ -1,8 +1,8 @@
-import React from "react";
+//
 import medecins from "../assets/images/medecins-removebg-preview.png";
 import healthIcon from "../assets/images/heart.svg";
 import stetoscope from "../assets/images/stethoscope.png";
-import TopBar from "./TopBar";
+// import TopBar from "./TopBar";
 import Pitch from "./Pitch";
 const Hero = () => {
 	return (

@@ -1,12 +1,10 @@
-import React from "react";
+//
 import doctor from "../assets/images/basdoctor.png";
 
 const DoctorCard = (props: { name: string; speciality: string }) => {
 	return (
 		<>
-		<div>
-			{""}
-		</div>
+			<div>{""}</div>
 			<div className="z-200 flex flex-col flex-none space-y-8 bg-blue-500 p-4 rounded-3xl w-53">
 				<div className="relative bg-white rounded-[40px] w-full h-32">
 					<img

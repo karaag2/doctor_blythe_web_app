@@ -1,4 +1,4 @@
-import React from "react";
+//
 import InfoCard from "./InfoCard";
 import scheldule from "../assets/images/schedule (1).png";
 import doctor from "../assets/images/doctor (2).png";
