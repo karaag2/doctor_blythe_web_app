@@ -1,17 +1,31 @@
+import React from "react";
 import clsx from "clsx";
 
-const Button = (props: { title: string; addStyle?: string }) => {
-	return (
-		<button
-			type="button"
-			className={clsx(
-				"bg-blue-500 hover:bg-blue-300 me-2 px-5 py-2 rounded-full focus:outline-none focus:ring-4 focus:ring-blue-300 font-[Montserrat] font-medium text-white text-sm !text-base text-center amdow",
-				props.addStyle,
-			)}
-		>
-			{props.title}
-		</button>
-	);
+interface ButtonProps {
+  title: string;
+  addStyle?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+}
+
+const Button: React.FC<ButtonProps> = ({
+  title,
+  addStyle,
+  onClick,
+  type = "button"
+}) => {
+  return (
+    <button
+      type={type}
+      onClick={onClick}
+      className={clsx(
+        "bg-sky-500 hover:bg-sky-600 active:scale-95 px-6 py-2.5 rounded-full focus:outline-none focus:ring-4 focus:ring-sky-200 font-[Montserrat] font-semibold text-white text-sm text-center transition shadow-md shadow-sky-500/20 cursor-pointer",
+        addStyle
+      )}
+    >
+      {title}
+    </button>
+  );
 };
-//"font-black text-md font-thin"
+
 export default Button;

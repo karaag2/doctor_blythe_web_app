@@ -1,70 +1,100 @@
-//
+import React from "react";
 import DetailCard from "./DetailCard";
 import fort from "../assets/images/specialist.png";
 import ServicePill from "./ServicePill";
-import icon from "../assets/images/pharmacy.png";
+import iconPharmacy from "../assets/images/pharmacy.png";
+import iconHeart from "../assets/images/cardiology.png";
+import iconTooth from "../assets/images/tooth.png";
+import iconDoctor from "../assets/images/doctor.png";
 
-const Services = () => {
-	return (
-		<div className="bg-white py-12 overflow-hidden font-[Montserrat]">
-			<div className="space-y-2 text-center">
-				<h1 className="font-bold text-blue-300 text-xs uppercase tracking-widest">
-					service
-				</h1>
-				<h2 className="font-bold text-2xl sm:text-4xl capitalize">
-					our medical services
-				</h2>
-			</div>
-			<div className="relative flex sm:flex max-sm:flex-col justify-between sm:justify-between">
-				<div className="mx-auto my-12 mb-12 w-full sm:w-2/5 max-w-3xl h-96 sm:-translate-x-10">
-					<img src={fort} alt="Specialist" className="w-full h-auto ammdow" />
+interface ServicesProps {
+  onOpenBooking: () => void;
+}
 
-					<ServicePill
-						title="Medecine"
-						positionning="top-[60%] left-[5%] md:top-[55%] md:left-[10%]"
-						size="scale-75 md:scale-100"
-						rightIcon={icon}
-					/>
+const Services: React.FC<ServicesProps> = ({ onOpenBooking }) => {
+  return (
+    <section id="services" className="bg-white py-16 overflow-hidden font-[Montserrat] scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="space-y-2 text-center max-w-2xl mx-auto mb-12">
+          <h1 className="font-bold text-sky-500 text-xs uppercase tracking-widest">
+            NOS SERVICES MÉDICAUX
+          </h1>
+          <h2 className="font-extrabold text-slate-900 text-2xl sm:text-4xl capitalize tracking-tight">
+            Des Soins Spécialisés Pour Toute la Famille
+          </h2>
+          <p className="text-slate-500 text-sm">
+            Une expertise médicale transversale réunie sous un même toit pour simplifier votre parcours de santé.
+          </p>
+        </div>
 
-					<ServicePill
-						title="Medecine"
-						positionning="top-[15%] left-[0%] md:top-[10%] md:left-[10%]"
-						size="scale-50 md:scale-90"
-						leftIcon={icon}
-					/>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Sphere visuelle avec pilules interactives */}
+          <div className="lg:col-span-6 relative flex justify-center items-center min-h-[380px]">
+            <div className="relative w-full max-w-md aspect-square flex items-center justify-center">
+              <img
+                src={fort}
+                alt="Médecin Spécialiste"
+                className="w-4/5 h-auto object-contain ammdow select-none"
+              />
 
-					<ServicePill
-						title="Medecine"
-						positionning="top-[30%] right-[0%] md:top-[25%] md:right-[10%]"
-						size="scale-60 md:scale-90"
-						rightIcon={icon}
-					/>
+              <ServicePill
+                title="Cardiologie"
+                positionning="top-[10%] left-[5%]"
+                size="scale-90 sm:scale-100"
+                rightIcon={iconHeart}
+              />
 
-					<ServicePill
-						title="Medecine"
-						positionning="bottom-[15%] right-[5%] md:bottom-[10%] md:right-[10%]"
-						size="scale-70 md:scale-100"
-						leftIcon={icon}
-					/>
+              <ServicePill
+                title="Dentisterie & Soins"
+                positionning="top-[25%] right-[0%]"
+                size="scale-90 sm:scale-100"
+                leftIcon={iconTooth}
+              />
 
-					<ServicePill
-						title="Medecine"
-						positionning="bottom-0 left-[0%] md:bottom-[5%] md:left-[10%]"
-						size="scale-50 md:scale-85"
-						leftIcon={icon}
-					/>
-				</div>
-				<div className="sm:flex items-center px-4 sm:px-0 sm:max-w-2/5 md:max-w-1/2">
-					<DetailCard
-						title="Dental care service"
-						detail="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..."
-						buttontitle="Learn More"
-						isbutton
-					/>
-				</div>
-			</div>
-		</div>
-	);
+              <ServicePill
+                title="Chirurgie Générale"
+                positionning="bottom-[25%] left-[0%]"
+                size="scale-90 sm:scale-100"
+                rightIcon={iconDoctor}
+              />
+
+              <ServicePill
+                title="Pharmacie Clinique"
+                positionning="bottom-[10%] right-[5%]"
+                size="scale-90 sm:scale-100"
+                leftIcon={iconPharmacy}
+              />
+            </div>
+          </div>
+
+          {/* Explication et statistiques cliniques */}
+          <div className="lg:col-span-6 space-y-6">
+            <DetailCard
+              title="Prise en Charge Intégrale & Diagnostic Rapide"
+              detail="Nos praticiens collaborent quotidiennement afin d'établir des diagnostics précis et des plans de traitement adaptés à chaque pathologie. Du dépistage préventif aux interventions programmées, vous bénéficiez d'un encadrement médical d'excellence."
+              buttontitle="Prendre rendez-vous"
+              isbutton
+              onButtonClick={onOpenBooking}
+            />
+
+            <div className="grid grid-cols-2 gap-4 px-4 sm:px-6">
+              <div className="p-4 bg-sky-50/70 rounded-2xl border border-sky-100">
+                <span className="text-2xl font-black text-sky-500">98%</span>
+                <p className="text-xs text-slate-700 font-semibold mt-1">Satisfaction Patient</p>
+                <p className="text-[11px] text-slate-500">Sur plus de 2 400 avis vérifiés</p>
+              </div>
+
+              <div className="p-4 bg-sky-50/70 rounded-2xl border border-sky-100">
+                <span className="text-2xl font-black text-sky-500">&lt; 15 min</span>
+                <p className="text-xs text-slate-700 font-semibold mt-1">Ponctualité Respectée</p>
+                <p className="text-[11px] text-slate-500">Prise en charge à l'heure convenue</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Services;

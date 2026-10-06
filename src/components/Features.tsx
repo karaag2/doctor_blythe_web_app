@@ -1,36 +1,72 @@
-//
+import React from "react";
 import DetailCard from "./DetailCard";
 import icon from "../assets/images/hospital.png";
 import stetho from "../assets/images/stethoscope (3).png";
-import Button from "./Button";
+import { CheckCircle2, ShieldCheck, Zap } from "lucide-react";
 
-const Features = () => {
-	return (
-		<div className="relative bg-blue-100 mb-6 px-4 py-10 overflow-hidden text-enter text-white pb">
-			<DetailCard
-				heading="Features"
-				title="our speciality"
-				styles="pb-8 text-center"
-			/>
-			<div className="sm:relative flex flex-col flex-none justify-between space-y-6 bg-blue-500 mx-auto px-9 py-8 rounded-4xl md:max-w-xl lg:max-w-2xl font-[Montserrat]">
-				<div className="flex justify- items-center space-x-4">
-					<img src={icon} alt="" className="w-12" />
-					<h3 className="md:w-2/3 font-bold break-words">Online Appointment</h3>
-				</div>
-				<p className="max-w-3xs text-justify">
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry.
-				</p>
-				<Button
-					title="Learn more"
-					addStyle="!text-base font-[Montserrat] amdow bg-white !text-blue-500 !sm:w-fit"
-				/>
-				<div className="top-18 md:top-0 -right-8 -z-0 absolute sm:w-1/2 sm:h-1/2">
-					<img src={stetho} alt="" className="mx-auto h-36 sm:scale-200" />
-				</div>
-			</div>
-		</div>
-	);
+interface FeaturesProps {
+  onOpenBooking: () => void;
+}
+
+const Features: React.FC<FeaturesProps> = ({ onOpenBooking }) => {
+  return (
+    <section id="specialities" className="relative bg-sky-50/60 py-16 px-4 overflow-hidden scroll-mt-20">
+      <div className="max-w-7xl mx-auto">
+        <DetailCard
+          heading="NOTRE SPÉCIALITÉ"
+          title="Une Expérience de Soins d'Excellence"
+          detail="Une prise en charge humaine, des équipements de diagnostic de pointe et un suivi personnalisé pour chaque patient."
+          styles="pb-10 text-center max-w-2xl mx-auto"
+        />
+
+        <div className="relative overflow-hidden bg-gradient-to-br from-sky-500 to-sky-600 text-white mx-auto p-8 sm:p-12 rounded-3xl max-w-4xl shadow-xl shadow-sky-500/20 font-[Montserrat]">
+          <div className="relative z-10 max-w-xl space-y-6">
+            <div className="flex items-center space-x-3">
+              <div className="p-2.5 bg-white/10 rounded-2xl backdrop-blur-xs">
+                <img src={icon} alt="" className="w-8 h-8 object-contain" />
+              </div>
+              <h3 className="text-2xl font-bold tracking-tight">
+                Rendez-Vous Médical en Ligne
+              </h3>
+            </div>
+
+            <p className="text-sky-50 text-sm leading-relaxed">
+              Bénéficiez d'une coordination médicale fluide entre votre médecin traitant et nos spécialistes. Vos ordonnances et comptes-rendus sont centralisés et téléchargeables en toute sécurité.
+            </p>
+
+            <ul className="space-y-2.5 text-xs text-sky-50 font-medium">
+              <li className="flex items-center gap-2">
+                <CheckCircle2 size={16} className="text-white flex-none" />
+                Téléconsultation et consultations sur place sans attente
+              </li>
+              <li className="flex items-center gap-2">
+                <ShieldCheck size={16} className="text-white flex-none" />
+                Données d'hébergement de santé certifiées HDS & RGPD
+              </li>
+              <li className="flex items-center gap-2">
+                <Zap size={16} className="text-white flex-none" />
+                Rappel automatique par SMS 24h avant votre consultation
+              </li>
+            </ul>
+
+            <div className="pt-2">
+              <button
+                type="button"
+                onClick={onOpenBooking}
+                className="px-7 py-3.5 bg-white text-sky-600 hover:bg-sky-50 active:scale-95 rounded-full font-bold text-xs uppercase tracking-wider transition cursor-pointer shadow-lg shadow-black/10"
+              >
+                Prendre un rendez-vous rapide
+              </button>
+            </div>
+          </div>
+
+          <div className="hidden md:block absolute -right-6 -bottom-8 w-80 opacity-90 pointer-events-none">
+            <img src={stetho} alt="" className="w-full h-auto drop-shadow-2xl" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Features;

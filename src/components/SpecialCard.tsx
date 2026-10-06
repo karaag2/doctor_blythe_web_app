@@ -1,24 +1,23 @@
-//
-import { type ReactNode } from "react";
+import React, { type ReactNode } from "react";
 
-const InfoCard = (props: {
-	title: string;
-	icon: string;
-	children: ReactNode;
-}) => {
-	return (
-		<>
-			<div className="flex flex-col flex-none space-y-6 bg-blue-500 mx-auto px-9 py-8 rounded-4xl w-60 font-[Montserrat] text-white">
-				<div className="flex justify-between items-center space-x-4">
-					<h3 className="w-1/2 font-bold break-words">{props.title}</h3>
-					<img src={props.icon} alt="" className="w-12" />
-				</div>
-				<div>{""}</div>
-				{props.children}
-			</div>
-			<div>{""}</div>
-		</>
-	);
+interface SpecialCardProps {
+  title: string;
+  icon: string;
+  children: ReactNode;
+}
+
+const SpecialCard: React.FC<SpecialCardProps> = ({ title, icon, children }) => {
+  return (
+    <div className="flex flex-col flex-none justify-between space-y-4 bg-sky-500 text-white px-6 py-6 rounded-3xl w-60 font-[Montserrat] shadow-lg shadow-sky-500/20">
+      <div className="flex justify-between items-start space-x-2">
+        <h3 className="font-bold text-sm leading-tight text-white">{title}</h3>
+        <img src={icon} alt="" className="w-8 h-8 object-contain flex-none brightness-0 invert" />
+      </div>
+      <div className="text-xs space-y-2 opacity-95 leading-relaxed">
+        {children}
+      </div>
+    </div>
+  );
 };
 
-export default InfoCard;
+export default SpecialCard;
